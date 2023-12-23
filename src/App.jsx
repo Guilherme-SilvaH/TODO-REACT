@@ -38,13 +38,22 @@ function App() {
     setTodos(newTodos)
   };
 
+  const removeTodo = (id) => {
+    const newTodos = [...todos]
+    const filteredTodos = newTodos.filter(todo => 
+      todo.id !== id ? todo : null
+      ); /* Filter para podermos saber qual o id que nao esta igual e se tiver igual, vamos excluir */
+
+      setTodos(filteredTodos); /* Atualizar o estado */
+  }
+
   return( 
   <div className="app">
   <h1>Lista de Tarefas</h1>
   <div className='todo-list'>
    {/* percorrer o array de objeto e exibir todos os TODO*/}
     {todos.map((todo) => (  
-      <Todo key={todo.id} todo={todo}/>
+      <Todo key={todo.id} todo={todo} removeTodo={removeTodo}/>
     ))}
   </div>
 
