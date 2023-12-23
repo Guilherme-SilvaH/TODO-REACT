@@ -7,7 +7,8 @@ import Search from './components/Search';
 import Filter from './components/Filter';
 
 function App() {
-  // Inicializa o estado dos todos com base no localStorage ou um array vazio
+
+  // Inicializa o estado dos Todos com base no localStorage ou um array vazio
   const [todos, setTodos] = useState(() => {
     const storedTodos = localStorage.getItem('todos');
     return storedTodos ? JSON.parse(storedTodos) : [];
