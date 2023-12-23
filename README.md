@@ -13,10 +13,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Hooks
-- LocalStorag
+- LocalStorage
   
 ## 💻 Projeto
-Projeto de Interface Responsiva para Cadastro de Clientes com CRUD,
+Lista de Tarefas em React
 
 ## Funcionalidades
 
