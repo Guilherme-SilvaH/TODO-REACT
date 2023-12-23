@@ -39,12 +39,18 @@ function App() {
   };
 
   const removeTodo = (id) => {
-    const newTodos = [...todos]
-    const filteredTodos = newTodos.filter(todo => 
+    const newTodos = [...todos] /* faz uma copia dos itens que tem no array de obj */
+    const filteredTodos = newTodos.filter(todo =>  /* Filter nao altera o array original */ 
       todo.id !== id ? todo : null
-      ); /* Filter para podermos saber qual o id que nao esta igual e se tiver igual, vamos excluir */
+      ); /* Filter para podermos saber qual o id que nao esta igual e se tiver igual, vamos excluir */ 
 
       setTodos(filteredTodos); /* Atualizar o estado */
+  };
+  const completeTodo = (id) => {
+    const newTodos = [...todos] /* faz uma copia dos itens que tem no array de obj */
+    newTodos.map((todo) => todo.id === id ? todo.isCompleted = !todo.isCompleted : todo); /* Filter altera o array original */ 
+    setTodos(newTodos);
+
   }
 
   return( 
@@ -53,7 +59,7 @@ function App() {
   <div className='todo-list'>
    {/* percorrer o array de objeto e exibir todos os TODO*/}
     {todos.map((todo) => (  
-      <Todo key={todo.id} todo={todo} removeTodo={removeTodo}/>
+      <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo}/>
     ))}
   </div>
 
