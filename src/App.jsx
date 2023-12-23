@@ -5,6 +5,7 @@ import "./App.css";
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 import Search from './components/Search';
+import Filter from './components/Filter';
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
   <div className="app">
   <h1>Lista de Tarefas</h1>
   <Search search={search} setSearch={setSearch}></Search>
+  <Filter></Filter>
   <div className='todo-list'>
    {/* percorrer o array de objeto e exibir todos os TODO*/}
     {todos.filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()) /* faz um filtro que se o pesquisar for igual a funcao pesquisar, ele ja aplica o filtro */
