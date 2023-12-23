@@ -25,7 +25,18 @@ function App() {
       category: "Estudos",
       isCompleted: false,
     }
-  ])
+  ]);
+
+  const addTodo = (text, category) => {
+    const newTodos = [...todos, { /*vai receber todos os TODOs por spread e vai criar um novo objeto de TODOs */
+      id: Math.floor(Math.random() * 10000), /* Gerar um numero aleatorio */
+      text,
+      category,
+      isCompleted: false
+    }]
+
+    setTodos(newTodos)
+  };
 
   return( 
   <div className="app">
@@ -33,11 +44,11 @@ function App() {
   <div className='todo-list'>
    {/* percorrer o array de objeto e exibir todos os TODO*/}
     {todos.map((todo) => (  
-      <Todo todo={todo}/>
+      <Todo key={todo.id} todo={todo}/>
     ))}
   </div>
 
-  <TodoForm />
+  <TodoForm addTodo={addTodo}/>
 </div>)
   
 
