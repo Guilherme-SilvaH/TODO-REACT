@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="#-tecnologias">Seja bem-vindo ao repositório do projeto de Lista de Tarefas em React! Esta iniciativa foi criada com o intuito de oferecer uma experiência de usuário eficiente e agradável no gerenciamento diário de tarefas, utilizando a poderosa biblioteca JavaScript, React.
+  <a>Seja bem-vindo ao repositório do projeto de Lista de Tarefas em React! Esta iniciativa foi criada com o intuito de oferecer uma experiência de usuário eficiente e agradável no gerenciamento diário de tarefas, utilizando a poderosa biblioteca JavaScript, React.
 </p>
 
 
